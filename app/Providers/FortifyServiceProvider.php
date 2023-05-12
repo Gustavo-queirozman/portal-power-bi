@@ -47,4 +47,6 @@ class FortifyServiceProvider extends ServiceProvider
     {
         return 'username';
     }
+
+
 }
