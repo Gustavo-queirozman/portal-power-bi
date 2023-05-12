@@ -23,11 +23,11 @@ Use lib laravel/fortify to make system authenticated.
     </li>
     <li>
         <h3>Execute in SGBD of Mysql</h3>
-        <pre>create database db_auth;<br>use db_auth;</pre>
+        <pre>create database db_painel;<br>use db_painel;</pre>
     </li>
     <li>
         <h3>Modify in file <strong>.env</strong> config of database</h3>
-        <pre>DB_CONNECTION=mysql<br>DB_HOST=127.0.0.1<br>DB_PORT=3306<br>DB_DATABASE=db_auth<br>DB_USERNAME=root<br>DB_PASSWORD=</pre>
+        <pre>DB_CONNECTION=mysql<br>DB_HOST=127.0.0.1<br>DB_PORT=3306<br>DB_DATABASE=db_painel<br>DB_USERNAME=root<br>DB_PASSWORD=</pre>
     </li>
     <li>
         <h3>Execute in cmd command to create default tables in mysql at the</h3>
