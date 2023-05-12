@@ -17,7 +17,7 @@
             @csrf
            
             <img src="./img/logout.png" alt="sair" style="width:35px">
-            <input type="submit">
+            <input type="submit" value="Sair">
        </form>
     </header>
 
@@ -31,16 +31,17 @@ box-shadow: 5px 1px 5px -1px rgba(0,0,0,0.17);   top: 0;
   height: 100%; background-color:#00995D; color:white">
                 <ul style="list-style: none;">
                     <li>
-                        <h4 style="font-weight: normal;">Menu Principal</h4>
+                        <a href="/home" style="color: white; text-decoration:none;"><h4 style="font-weight: normal;">Menu Principal</h4></a>
                     </li>
                     <li>
-                        <h4 style="font-weight: normal;">Meus Dados</h4>
+                        <a href="#dados" style="color:white; text-decoration:none;"><h4 style="font-weight: normal;">Meus Dados</h4></a>
                     </li>
                 </ul>
             </nav>
 
             <div style="display:flex; align-content:center; background-color:white; height:50px; width:100%; align-items:center;" >
-                <button id="menu-button" onclick="showMenu()" style="height: max-content; margin-left:10px;">Menu</button>
+                <!--<button  onclick="showMenu()" >Menu</button>-->
+                <img id="menu-button" src="./img/menu.png" style="height: 30px; margin-left:10px;" onclick="showMenu()" >
                 <h4 style="margin:0px; margin-left:5px;">INFORMAÇÕES ATUALIZADAS ATÉ MAR/23</h4>
             </div>
         </div>
