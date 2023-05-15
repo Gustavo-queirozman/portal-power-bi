@@ -7,7 +7,7 @@ Use lib laravel/fortify to make system authenticated.
 <ul>
     <li>
         <h3>Clone this repository</h3>
-        <pre>git clone https://github.com/Gustavo-queirozman/auth</pre>
+        <pre>git clone https://github.com/Gustavo-queirozman/painel</pre>
     </li>
     <li>
         <h3>Execute in cmd</h3>
@@ -23,7 +23,6 @@ Use lib laravel/fortify to make system authenticated.
     </li>
     <li>
         <h3>Execute in SGBD script the db.sql</h3>
-        <pre>create database db_painel;<br>use db_painel;</pre>
     </li>
     <li>
         <h3>Modify in file <strong>.env</strong> config of database</h3>
@@ -31,8 +30,9 @@ Use lib laravel/fortify to make system authenticated.
     </li>
     <li>
         <h3>Execute in cmd</h3>
-        <pre>npm run install
-             npm run build</pre>
+        <pre>npm run install</pre>
+         <pre>npm run build</pre>
+         <pre>php artisan key:generate</pre>
     </li>
     <li>
         <h3>Run project</h3>
