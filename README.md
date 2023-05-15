@@ -30,8 +30,8 @@ Use lib laravel/fortify to make system authenticated.
     </li>
     <li>
         <h3>Execute in cmd</h3>
-        <pre>npm run install
-             npm run build</pre>
+        <pre>npm run install</pre>
+         <pre>npm run build</pre>
     </li>
     <li>
         <h3>Run project</h3>
