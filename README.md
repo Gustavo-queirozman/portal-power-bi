@@ -23,7 +23,6 @@ Use lib laravel/fortify to make system authenticated.
     </li>
     <li>
         <h3>Execute in SGBD script the db.sql</h3>
-        <pre>create database db_painel;<br>use db_painel;</pre>
     </li>
     <li>
         <h3>Modify in file <strong>.env</strong> config of database</h3>
