@@ -64,17 +64,11 @@ box-shadow: 5px 1px 5px -1px rgba(0,0,0,0.17);   top: 0;
     </style>
 
     <script>
-        // seleciona o botão que mostra/oculta o menu
         var menuButton = document.getElementById("menu-button");
-        // seleciona o menu
         var menuNav = document.getElementById("menu-nav");
-        // seleciona a barra de navegação
         var navbar = document.getElementById("navbar");
-        // adiciona um evento de clique ao documento
         document.addEventListener("click", function(event) {
-            // verifica se o clique foi fora do menu
             if (event.target != menuNav && event.target != menuButton) {
-                // oculta o menu e a barra de navegação
                 menuNav.style.display = "none";
                 navbar.style.display = "none";
             }
