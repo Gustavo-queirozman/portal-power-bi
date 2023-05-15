@@ -16,33 +16,31 @@ class DashboardController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
-    {
-        return  view('dashboard');
-    }
 
-    public function faturamento(Request $request){
+
+    public function index(Request $request){
+       
         $versao = $request->input('versao');
         $setor = $request->input('setor');
 
-        if($setor = "faturamento"){
+        if($setor == "faturamento"){
             //dashboard anterior
-            if($versao = "anterior"){
-                return view('dashboard')->with('UrlPowerBi','https://powerbi.faturamento/anterior');
+            if($versao == "anterior"){
+                return view('dashboard')->with('urlPowerBi','https://powerbi.faturamento/anterior');
             }
 
             //dashboard nova
-            return view('dashboard')->with('UrlPowerBi','https://powerbi.faturamento/nova');
+            return view('dashboard')->with('urlPowerBi','https://powerbi.faturamento/nova');
         }
 
-        if($setor = "venda"){
+        if($setor == "venda"){
             //dashboard anterior
-            if($versao = "anterior"){
-                return view('dashboard')->with('UrlPowerBi','https://powerbi.vendas/anterior');
+            if($versao == "anterior"){
+                return view('dashboard')->with('urlPowerBi','https://powerbi.vendas/anterior');
             }
 
             //dashboard nova
-            return view('dashboard')->with('UrlPowerBi','https://powerbi.vendas/nova');
+            return view('dashboard')->with('urlPowerBi','https://powerbi.vendas/nova');
         }
     }
 

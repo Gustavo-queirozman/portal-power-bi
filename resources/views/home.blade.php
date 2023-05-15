@@ -10,9 +10,20 @@
             Dados atualizados até: Mar/2023. <br> 
             Sistemas de Referência: Sala de situação.
         </p>
-        <div class="row">
-            <button>NOVO PAINEL</button>
-            <button>VERSAO ANTERIOR</button>
+        <div class="row" style="display:flex">
+            <form action="/dashboard" method="post">
+                @csrf
+                <input type="hidden" name="setor" value="faturamento">
+                <input type="hidden" name="versao" value="nova">
+                <button type="submit">NOVO PAINEL</button>
+            </form>
+
+            <form action="/dashboard" method="post">
+                @csrf
+                <input type="hidden" name="setor" value="faturamento">
+                <input type="hidden" name="versao" value="anterior">
+                <button type="submit">VERSÃO ANTERIOR</button>
+            </form>
         </div>
     </div>
     <div style="background-color:white; border-radius:3px; margin:5px; width:280px; padding:10px">
@@ -23,12 +34,22 @@
             Dados atualizados até: Mar/2023. <br> 
             Sistemas de Referência: Sala de situação.
         </p>
-        <div class="row">
-            <a href="/dashboard"><button>NOVO PAINEL</button></a>
-            <a href="/dashboard"><button>VERSÃO ANTERIOR</button></a>
+        <div class="row" style="display:flex">
+            <form action="/dashboard" method="post">
+                @csrf
+                <input type="hidden" name="setor" value="venda">
+                <input type="hidden" name="versao" value="nova">
+                <button type="submit">NOVO PAINEL</button>
+            </form>
+
+            <form action="/dashboard" method="post">
+                @csrf
+                <input type="hidden" name="setor" value="venda">
+                <input type="hidden" name="versao" value="anterior">
+                <button type="submit">VERSÃO ANTERIOR</button>
+            </form>
         </div>
     </div>
-
 </div>
 @endsection
 
@@ -56,8 +77,5 @@
             display: flex;
             justify-content: center;
         }
-
-
-
     }
 </style>
