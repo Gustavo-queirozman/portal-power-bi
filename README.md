@@ -7,7 +7,7 @@ Use lib laravel/fortify to make system authenticated.
 <ul>
     <li>
         <h3>Clone this repository</h3>
-        <pre>git clone https://github.com/Gustavo-queirozman/auth</pre>
+        <pre>git clone https://github.com/Gustavo-queirozman/painel</pre>
     </li>
     <li>
         <h3>Execute in cmd</h3>
