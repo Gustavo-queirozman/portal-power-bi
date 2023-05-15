@@ -12,10 +12,10 @@
     <header class="flex space-between" style="display:flex; padding:15px; background-color:white; box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);
 -webkit-box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);
 -moz-box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);  background-color:#00995D; align-items:center;">
-        <img style="width:100px;height:30px;" src="https://logodownload.org/wp-content/uploads/2014/05/unimed-logo-1.png" alt="Logo">
+        <img style="width:100px;height:30px;" src="./img/logo.png" alt="Logo">
         <form action="/logout" method="post" style="display:flex; align-items:center; margin-bottom:0px;">
             @csrf
-            <button style="background-color: transparent; border-color:transparent;"><img src="./img/logout.png" alt="sair" style="width:35px"></button>
+            <button style="background-color: transparent; border-color:transparent;"><img src="./img/logout.png" alt="sair" style="width:30px"></button>
         </form>
     </header>
 
@@ -43,8 +43,8 @@ box-shadow: 5px 1px 5px -1px rgba(0,0,0,0.17);   top: 0;
 
             <div style="display:flex; align-content:center; background-color:white; height:50px; width:100%; align-items:center;">
                 <!--<button  onclick="showMenu()" >Menu</button>-->
-                <img id="menu-button" src="./img/menu.png" style="height: 30px; margin-left:10px;" onclick="showMenu()">
-                <h4 style="margin:0px; margin-left:5px;">INFORMAÇÕES ATUALIZADAS ATÉ MAR/23</h4>
+                <img id="menu-button" src="./img/menu.png" style="height: 25px; margin-left:15px;" onclick="showMenu()">
+                <h4 style="margin:0px; margin-left:10px; font-weight:100;">INFORMAÇÕES ATUALIZADAS ATÉ MAR/23</h4>
             </div>
         </div>
 
