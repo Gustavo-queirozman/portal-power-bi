@@ -12,11 +12,11 @@
     <header class="flex space-between" style="display:flex; padding:15px; background-color:white; box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);
 -webkit-box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);
 -moz-box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);  background-color:#00995D; align-items:center;">
-        <img style="width:100px;height:30px;" src="" alt="Logo">
-       <form action="/logout" method="post" style="display:flex; align-items:center;">
+        <img style="width:100px;height:30px;" src="https://logodownload.org/wp-content/uploads/2014/05/unimed-logo-1.png" alt="Logo">
+        <form action="/logout" method="post" style="display:flex; align-items:center; margin-bottom:0px;">
             @csrf
             <button style="background-color: transparent; border-color:transparent;"><img src="./img/logout.png" alt="sair" style="width:35px"></button>
-       </form>
+        </form>
     </header>
 
     <div>
@@ -29,17 +29,21 @@ box-shadow: 5px 1px 5px -1px rgba(0,0,0,0.17);   top: 0;
   height: 100%; background-color:#00995D; color:white">
                 <ul style="list-style: none;">
                     <li>
-                        <a href="/home" style="color: white; text-decoration:none;"><h4 style="font-weight: normal;">Menu Principal</h4></a>
+                        <a href="/home" style="color: white; text-decoration:none;">
+                            <h4 style="font-weight: normal;">Menu Principal</h4>
+                        </a>
                     </li>
                     <li>
-                        <a href="#dados" style="color:white; text-decoration:none;"><h4 style="font-weight: normal;">Meus Dados</h4></a>
+                        <a href="#dados" style="color:white; text-decoration:none;">
+                            <h4 style="font-weight: normal;">Meus Dados</h4>
+                        </a>
                     </li>
                 </ul>
             </nav>
 
-            <div style="display:flex; align-content:center; background-color:white; height:50px; width:100%; align-items:center;" >
+            <div style="display:flex; align-content:center; background-color:white; height:50px; width:100%; align-items:center;">
                 <!--<button  onclick="showMenu()" >Menu</button>-->
-                <img id="menu-button" src="./img/menu.png" style="height: 30px; margin-left:10px;" onclick="showMenu()" >
+                <img id="menu-button" src="./img/menu.png" style="height: 30px; margin-left:10px;" onclick="showMenu()">
                 <h4 style="margin:0px; margin-left:5px;">INFORMAÇÕES ATUALIZADAS ATÉ MAR/23</h4>
             </div>
         </div>
