@@ -3,7 +3,7 @@
 @section('conteudo')
 <div class="flex wrap" style="padding:0px; width:100%;" id="conteudos">
     <div style="background-color:white; border-radius:3px;  margin:5px; width:280px; padding:10px">
-        <h3 style="margin:0px">Plano de Saúde</h3>
+        <h3 style="margin:0px">Faturamento</h3>
         <p>
             Fonte: Caderno 2.0 <br>
             Dados atualizados em: 07/05/2023. <br>
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div style="background-color:white; border-radius:3px; margin:5px; width:280px; padding:10px">
-    <h3 style="margin:0px">Plano de Saúde</h3>
+    <h3 style="margin:0px">Venda</h3>
         <p>
             Fonte: Caderno 2.0 <br>
             Dados atualizados em: 07/05/2023. <br>
@@ -24,8 +24,8 @@
             Sistemas de Referência: Sala de situação.
         </p>
         <div class="row">
-            <button>NOVO PAINEL</button>
-            <button>VERSAO ANTERIOR</button>
+            <a href="/dashboard"><button>NOVO PAINEL</button></a>
+            <a href="/dashboard"><button>VERSÃO ANTERIOR</button></a>
         </div>
     </div>
 
