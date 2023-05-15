@@ -32,6 +32,7 @@ Use lib laravel/fortify to make system authenticated.
         <h3>Execute in cmd</h3>
         <pre>npm run install</pre>
          <pre>npm run build</pre>
+         <pre>php artisan key:generate</pre>
     </li>
     <li>
         <h3>Run project</h3>
