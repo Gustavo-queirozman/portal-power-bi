@@ -22,7 +22,7 @@ Use lib laravel/fortify to make system authenticated.
         <pre>.env.example</pre>
     </li>
     <li>
-        <h3>Execute in SGBD of Mysql</h3>
+        <h3>Execute in SGBD script the db.sql</h3>
         <pre>create database db_painel;<br>use db_painel;</pre>
     </li>
     <li>
@@ -30,8 +30,9 @@ Use lib laravel/fortify to make system authenticated.
         <pre>DB_CONNECTION=mysql<br>DB_HOST=127.0.0.1<br>DB_PORT=3306<br>DB_DATABASE=db_painel<br>DB_USERNAME=root<br>DB_PASSWORD=</pre>
     </li>
     <li>
-        <h3>Execute in cmd command to create default tables in mysql at the</h3>
-        <pre>php artisan migrate</pre>
+        <h3>Execute in cmd</h3>
+        <pre>npm run install
+             npm run build</pre>
     </li>
     <li>
         <h3>Run project</h3>

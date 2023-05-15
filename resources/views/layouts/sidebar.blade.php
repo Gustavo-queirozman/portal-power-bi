@@ -9,15 +9,13 @@
 </head>
 
 <body style="margin:0px">
-    <header class="flex space-between" style="padding:15px; background-color:white; box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);
+    <header class="flex space-between" style="display:flex; padding:15px; background-color:white; box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);
 -webkit-box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);
--moz-box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);  background-color:#00995D;">
+-moz-box-shadow: 1px 12px 9px -8px rgba(0,0,0,0.24);  background-color:#00995D; align-items:center;">
         <img style="width:100px;height:30px;" src="" alt="Logo">
-       <form action="/logout" method="post">
+       <form action="/logout" method="post" style="display:flex; align-items:center;">
             @csrf
-           
-            <img src="./img/logout.png" alt="sair" style="width:35px">
-            <input type="submit" value="Sair">
+            <button style="background-color: transparent; border-color:transparent;"><img src="./img/logout.png" alt="sair" style="width:35px"></button>
        </form>
     </header>
 

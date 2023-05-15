@@ -8,3 +8,4 @@ Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'index'])->na
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 Auth::routes(['register' => false]);
+
