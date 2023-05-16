@@ -15,14 +15,14 @@
                 @csrf
                 <input type="hidden" name="setor" value="faturamento">
                 <input type="hidden" name="versao" value="nova">
-                <button type="submit">NOVO PAINEL</button>
+                <button type="submit" class="button" style="margin-right:10px;">NOVO PAINEL</button>
             </form>
 
             <form action="/dashboard" method="post">
                 @csrf
                 <input type="hidden" name="setor" value="faturamento">
                 <input type="hidden" name="versao" value="anterior">
-                <button type="submit">VERSÃO ANTERIOR</button>
+                <button type="submit" class="button">VERSÃO ANTERIOR</button>
             </form>
         </div>
     </div>
@@ -39,14 +39,14 @@
                 @csrf
                 <input type="hidden" name="setor" value="venda">
                 <input type="hidden" name="versao" value="nova">
-                <button type="submit">NOVO PAINEL</button>
+                <button type="submit" class="button" style="margin-right:10px;">NOVO PAINEL</button>
             </form>
 
             <form action="/dashboard" method="post">
                 @csrf
                 <input type="hidden" name="setor" value="venda">
                 <input type="hidden" name="versao" value="anterior">
-                <button type="submit">VERSÃO ANTERIOR</button>
+                <button type="submit" class="button">VERSÃO ANTERIOR</button>
             </form>
         </div>
     </div>
@@ -77,5 +77,13 @@
             display: flex;
             justify-content: center;
         }
+    }
+
+    .button{
+        
+        border:1px solid #00995D;
+        background-color: #00995D;
+        padding:5px;
+        color:white;
     }
 </style>
