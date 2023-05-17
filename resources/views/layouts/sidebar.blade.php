@@ -33,11 +33,11 @@ box-shadow: 5px 1px 5px -1px rgba(0,0,0,0.17);   top: 0;
                             <h4 style="font-weight: normal;">Menu Principal</h4>
                         </a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="#dados" style="color:white; text-decoration:none;">
                             <h4 style="font-weight: normal;">Meus Dados</h4>
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
             </nav>
 
