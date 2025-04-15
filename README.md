@@ -25,6 +25,11 @@ A secure and robust web application that provides authenticated access to Power 
 | Queue System | Laravel Queues      |
 | Monitoring   | Laravel Telescope   |
 
+## Demo
+![Screencast from 15-04-2025 19_00_48](https://github.com/user-attachments/assets/37925fb3-2a21-432f-84c3-ce9425584489)
+![Screencast from 15-04-2025 18_59_31](https://github.com/user-attachments/assets/4aa670e4-d6ba-477e-8037-a20d169462cd)
+
+
 ## 📂 Project Structure
 
 The project follows a **Domain-Driven Design (DDD)** approach, separating concerns across different layers to improve code organization and scalability. Key directories include:
