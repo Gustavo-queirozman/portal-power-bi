@@ -41,6 +41,22 @@ class FortifyServiceProvider extends ServiceProvider
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
+
+        Fortify::requestPasswordResetLinkView(function () {
+            return view('auth.forgot-password'); // <- essa view deve existir
+        });
+    
+        Fortify::resetPasswordView(function ($request) {
+            return view('auth.reset-password', ['request' => $request->token]);
+        });
+
+        Fortify::requestPasswordResetLinkView(function () {
+            return view('auth.passwords.email');
+        });
+
+        Fortify::resetPasswordView(function ($request) {
+            return view('auth.passwords.reset', ['request' => $request]);
+        });
     }
 
     public function username()

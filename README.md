@@ -1,54 +1,67 @@
-<h1 style="margin-bottom: 0px;">About project</h1>
-<br>
-Use lib laravel/fortify to make system authenticated.
-<br>
-<br>
-<h2>To user this repository:</h2>
-<ul>
-    <li>
-        <h3>Clone this repository</h3>
-        <pre>git clone https://github.com/Gustavo-queirozman/painel</pre>
-    </li>
-    <li>
-        <h3>Execute in cmd</h3>
-        <pre>composer install</pre>
-    </li>
-    <li>
-        <h3>Create new file in source the project with name </h3>
-        <pre>.env</pre>
-    </li>
-    <li>
-        <h3>In new file <strong>.env</strong> use as copy config the file</h3>
-        <pre>.env.example</pre>
-    </li>
-    <li>
-        <h3>Execute in SGBD script the db.sql</h3>
-    </li>
-    <li>
-        <h3>Modify in file <strong>.env</strong> config of database</h3>
-        <pre>DB_CONNECTION=mysql<br>DB_HOST=127.0.0.1<br>DB_PORT=3306<br>DB_DATABASE=db_painel<br>DB_USERNAME=root<br>DB_PASSWORD=</pre>
-    </li>
-    <li>
-        <h3>Execute in cmd</h3>
-        <pre>npm run install</pre>
-         <pre>npm run build</pre>
-         <pre>php artisan key:generate</pre>
-    </li>
-    <li>
-        <h3>Run project</h3>
-        <pre>php artisan serve</pre>
-    </li>
-</ul>
+# Power BI Dashboard Panel
 
+A secure and robust web application that provides authenticated access to Power BI dashboards. Designed with scalability, performance, and maintainability in mind using Laravel 10 and modern frontend build tools.
 
+## 🔐 Features
 
+- **User Authentication** powered by [Laravel Fortify](https://laravel.com/docs/10.x/fortify)
+- **Secure Login System** with session management
+- **Error Tracking** and debug monitoring with [Laravel Telescope](https://laravel.com/docs/10.x/telescope)
+- **Email Notifications** via SMTP using [Mailhog](https://github.com/mailhog/MailHog) and queued jobs
+- **Frontend Build** using [Vite](https://vitejs.dev/) for fast and optimized assets (minified JS/CSS)
+- **Domain-Driven Design (DDD)** structure for clean and scalable architecture
+- **Built with Laravel 10** (latest stable version)
+- **MySQL Database** integration for data persistence
 
+## 🧱 Tech Stack
 
+| Layer        | Technology          |
+|--------------|---------------------|
+| Backend      | Laravel 10          |
+| Frontend     | Vite (JS/Blade)     |
+| Auth System  | Laravel Fortify     |
+| DB           | MySQL               |
+| Mail         | Mailhog (SMTP)      |
+| Queue System | Laravel Queues      |
+| Monitoring   | Laravel Telescope   |
 
+## 📂 Project Structure
 
+The project follows a **Domain-Driven Design (DDD)** approach, separating concerns across different layers to improve code organization and scalability. Key directories include:
 
+- `Domains/` - Domain logic and aggregates
+- `App/Http/Controllers/` - Entry points for user interaction
+- `App/Providers/` - Service container bindings
+- `Resources/Views/` - Blade templates built and optimized via Vite
 
+## 🚀 Getting Started
 
-<br>
+### Prerequisites
 
+- PHP 8.1+
+- Composer
+- MySQL
+- Node.js & NPM/Yarn
+- Mailhog (for local email testing)
 
+### Installation
+
+```bash
+git clone https://github.com/your-username/powerbi-dashboard.git
+cd powerbi-dashboard
+
+# Install PHP dependencies
+composer install
+
+# Install JS dependencies and build assets
+npm install && npm run build
+
+# Copy and configure environment
+cp .env.example .env
+php artisan key:generate
+
+# Run migrations
+php artisan migrate --seed
+
+# Start local server
+php artisan serve

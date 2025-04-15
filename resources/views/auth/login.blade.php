@@ -48,7 +48,7 @@
                         @enderror
                     </div>
 
-                    <a href="/forgot" class="forgot-password">
+                    <a href="/forgot-password" class="forgot-password">
                         <i class="fas fa-lock-open"></i> Esqueci minha senha
                     </a>
 

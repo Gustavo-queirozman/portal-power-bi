@@ -42,8 +42,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-    /* Header */
+  /* Header */
   .header {
     display: flex;
     align-items: center;
@@ -70,15 +69,16 @@ body {
     width: auto;
 }
 
-/* Login Container */
-.login-container {
+
+/* Container principal */
+.register-container {
     display: flex;
     min-height: calc(100vh - 62px); /* Altura total menos a altura do header */
     width: 100%;
 }
 
 /* Imagem lateral */
-.login-image {
+.register-image {
     display: none;
     background-image: url('https://giu.unimed.coop.br/img/thumbnail_2-01.d1fca7ec.jpg');
     background-size: cover;
@@ -87,13 +87,13 @@ body {
 }
 
 @media (min-width: 992px) {
-    .login-image {
+    .register-image {
         display: block;
     }
 }
 
-/* Formulário de login */
-.login-form-container {
+/* Formulário de cadastro */
+.register-form-container {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -103,16 +103,16 @@ body {
     background-color: var(--surface);
 }
 
-.login-form {
+.register-form {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     padding: var(--space-xl);
     background-color: var(--surface);
     border-radius: 8px;
     box-shadow: var(--shadow-md);
 }
 
-.login-form-title {
+.register-form-title {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: var(--space-lg);
@@ -120,8 +120,22 @@ body {
     text-align: center;
 }
 
+.register-form-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
 .form-group {
     margin-bottom: var(--space-lg);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
 }
 
 .form-control {
@@ -181,17 +195,32 @@ body {
     box-shadow: 0 0 0 3px rgba(0, 153, 93, 0.3);
 }
 
-.forgot-password {
-    display: block;
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.footer-links {
+    margin-top: var(--space-lg);
     text-align: center;
-    margin-bottom: var(--space-md);
+}
+
+.footer-links a {
     color: var(--text-secondary);
     text-decoration: none;
+    margin: 0 var(--space-sm);
     transition: color var(--transition);
 }
 
-.forgot-password:hover {
+.footer-links a:hover {
     color: var(--primary);
+}
+
+.footer-links a:not(:last-child):after {
+    content: '|';
+    margin-left: var(--space-sm);
+    color: var(--text-light);
 }
 
 /* Footer */
