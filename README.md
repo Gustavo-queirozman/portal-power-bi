@@ -47,7 +47,7 @@ The project follows a **Domain-Driven Design (DDD)** approach, separating concer
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/powerbi-dashboard.git](https://github.com/Gustavo-queirozman/powerbi-dashboard.git
+git clone https://github.com/Gustavo-queirozman/powerbi-dashboard.git
 cd powerbi-dashboard
 
 # Install PHP dependencies
