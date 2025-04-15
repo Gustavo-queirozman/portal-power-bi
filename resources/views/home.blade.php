@@ -1,89 +1,165 @@
 @extends('layouts.sidebar')
-@section('title', 'Home')
+@section('title', 'Dashboard')
 @section('conteudo')
-<div class="flex wrap" style="padding:0px; width:100%;" id="conteudos">
-    <div style="background-color:white; border-radius:3px;  margin:5px; width:280px; padding:10px">
-        <h3 style="margin:0px">Faturamento</h3>
-        <p>
-            Fonte: Caderno 2.0 <br>
-            Dados atualizados em: 07/05/2023. <br>
-            Dados atualizados até: Mar/2023. <br> 
-            Sistemas de Referência: Sala de situação.
-        </p>
-        <div class="row" style="display:flex">
-            <form action="/dashboard" method="post">
-                @csrf
-                <input type="hidden" name="setor" value="faturamento">
-                <input type="hidden" name="versao" value="nova">
-                <button type="submit" class="button" style="margin-right:10px;">NOVO PAINEL</button>
-            </form>
-
-            <form action="/dashboard" method="post">
-                @csrf
-                <input type="hidden" name="setor" value="faturamento">
-                <input type="hidden" name="versao" value="anterior">
-                <button type="submit" class="button">VERSÃO ANTERIOR</button>
-            </form>
+<div class="dashboard">
+    <header class="dashboard-header">
+        <h1>Visão Geral</h1>
+        <div class="dashboard-meta">
+            <span class="update-badge">Última atualização: 07/05/2023</span>
         </div>
-    </div>
-    <div style="background-color:white; border-radius:3px; margin:5px; width:280px; padding:10px">
-    <h3 style="margin:0px">Venda</h3>
-        <p>
-            Fonte: Caderno 2.0 <br>
-            Dados atualizados em: 07/05/2023. <br>
-            Dados atualizados até: Mar/2023. <br> 
-            Sistemas de Referência: Sala de situação.
-        </p>
-        <div class="row" style="display:flex">
-            <form action="/dashboard" method="post">
-                @csrf
-                <input type="hidden" name="setor" value="venda">
-                <input type="hidden" name="versao" value="nova">
-                <button type="submit" class="button" style="margin-right:10px;">NOVO PAINEL</button>
-            </form>
+     
+        @vite(['resources/css/home.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    </header>
+    
+    <main class="dashboard-modules">
+        <!-- Módulo de Faturamento -->
+        <div class="module-card faturamento">
+            <div class="module-header">
+                <div class="module-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="module-title">
+                    <h2>Faturamento</h2>
+                    <span class="module-subtitle">Análise e relatórios</span>
+                </div>
+                <div class="module-actions">
+                    <button class="action-toggle" aria-label="Expandir módulo">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="module-content">
+                <div class="content-row">
+                    <div class="info-tag"><i class="fas fa-database"></i> Fonte</div>
+                    <div class="info-value">Caderno 2.0</div>
+                </div>
+                <div class="content-row">
+                    <div class="info-tag"><i class="fas fa-calendar-check"></i> Dados até</div>
+                    <div class="info-value">Março/2023</div>
+                </div>
+                <div class="content-row">
+                    <div class="info-tag"><i class="fas fa-server"></i> Sistema</div>
+                    <div class="info-value">Sala de situação</div>
+                </div>
+            </div>
+            
+            <div class="module-actions-panel">
+                <form action="/dashboard" method="post">
+                    @csrf
+                    <input type="hidden" name="setor" value="faturamento">
+                    <input type="hidden" name="versao" value="nova">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-chart-bar"></i> 
+                        <span>Novo Painel</span>
+                    </button>
+                </form>
 
-            <form action="/dashboard" method="post">
-                @csrf
-                <input type="hidden" name="setor" value="venda">
-                <input type="hidden" name="versao" value="anterior">
-                <button type="submit" class="button">VERSÃO ANTERIOR</button>
-            </form>
+                <form action="/dashboard" method="post">
+                    @csrf
+                    <input type="hidden" name="setor" value="faturamento">
+                    <input type="hidden" name="versao" value="anterior">
+                    <button type="submit" class="btn btn-secondary">
+                        <i class="fas fa-history"></i> 
+                        <span>Versão Anterior</span>
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
+
+        <!-- Módulo de Vendas -->
+        <div class="module-card vendas">
+            <div class="module-header">
+                <div class="module-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="module-title">
+                    <h2>Vendas</h2>
+                    <span class="module-subtitle">Análise e relatórios</span>
+                </div>
+                <div class="module-actions">
+                    <button class="action-toggle" aria-label="Expandir módulo">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="module-content">
+                <div class="content-row">
+                    <div class="info-tag"><i class="fas fa-database"></i> Fonte</div>
+                    <div class="info-value">Caderno 2.0</div>
+                </div>
+                <div class="content-row">
+                    <div class="info-tag"><i class="fas fa-calendar-check"></i> Dados até</div>
+                    <div class="info-value">Março/2023</div>
+                </div>
+                <div class="content-row">
+                    <div class="info-tag"><i class="fas fa-server"></i> Sistema</div>
+                    <div class="info-value">Sala de situação</div>
+                </div>
+            </div>
+            
+            <div class="module-actions-panel">
+                <form action="/dashboard" method="post">
+                    @csrf
+                    <input type="hidden" name="setor" value="venda">
+                    <input type="hidden" name="versao" value="nova">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-chart-bar"></i> 
+                        <span>Novo Painel</span>
+                    </button>
+                </form>
+
+                <form action="/dashboard" method="post">
+                    @csrf
+                    <input type="hidden" name="setor" value="venda">
+                    <input type="hidden" name="versao" value="anterior">
+                    <button type="submit" class="btn btn-secondary">
+                        <i class="fas fa-history"></i> 
+                        <span>Versão Anterior</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
 </div>
 @endsection
 
+<!-- Adicionar links de fontes e bibliotecas -->
+@push('styles')
 
-<style>
-    body{
-        background-color: #F0F0F4;
-        font-family: Helvetica;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+@endpush
 
-    .flex {
-        display: flex;
-    }
-
-    .wrap {
-        flex-wrap: wrap;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    @media (max-width:304px) {
-        #conteudos {
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-    .button{
+@push('scripts')
+@vite(['resources/js/app.js'])
+<script>
+    // Adicionar depois o código JavaScript para interatividade
+    document.addEventListener('DOMContentLoaded', function() {
+        // Toggle para expandir/contrair módulos
+        const toggleButtons = document.querySelectorAll('.action-toggle');
         
-        border:1px solid #00995D;
-        background-color: #00995D;
-        padding:5px;
-        color:white;
-    }
-</style>
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const moduleCard = this.closest('.module-card');
+                const moduleContent = moduleCard.querySelector('.module-content');
+                
+                moduleContent.classList.toggle('collapsed');
+                
+                // Alterar ícone
+                const icon = this.querySelector('i');
+                if (moduleContent.classList.contains('collapsed')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    });
+</script>
+@endpush

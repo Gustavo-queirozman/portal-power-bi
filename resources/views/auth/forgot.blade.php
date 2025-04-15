@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Solicitar Cadastro</title>
+    <title>Esqueci Senha</title>
     <style>
         :root {
             /* Cores principais */
@@ -70,15 +70,15 @@
             height: 30px;
         }
 
-        /* Container principal */
-        .register-container {
+        /* Esqueci Senha Container */
+        .forgot-container {
             display: flex;
             min-height: calc(100vh - 62px); /* Altura total menos a altura do header */
             width: 100%;
         }
 
         /* Imagem lateral */
-        .register-image {
+        .forgot-image {
             display: none;
             background-image: url('https://giu.unimed.coop.br/img/thumbnail_2-01.d1fca7ec.jpg');
             background-size: cover;
@@ -87,13 +87,13 @@
         }
 
         @media (min-width: 992px) {
-            .register-image {
+            .forgot-image {
                 display: block;
             }
         }
 
-        /* Formulário de cadastro */
-        .register-form-container {
+        /* Formulário de recuperação de senha */
+        .forgot-form-container {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -103,16 +103,16 @@
             background-color: var(--surface);
         }
 
-        .register-form {
+        .forgot-form {
             width: 100%;
-            max-width: 450px;
+            max-width: 400px;
             padding: var(--space-xl);
             background-color: var(--surface);
             border-radius: 8px;
             box-shadow: var(--shadow-md);
         }
 
-        .register-form-title {
+        .forgot-form-title {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: var(--space-lg);
@@ -120,7 +120,7 @@
             text-align: center;
         }
 
-        .register-form-subtitle {
+        .forgot-form-subtitle {
             font-size: 0.875rem;
             color: var(--text-secondary);
             margin-bottom: var(--space-lg);
@@ -129,13 +129,6 @@
 
         .form-group {
             margin-bottom: var(--space-lg);
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: var(--space-sm);
-            font-weight: 500;
-            color: var(--text-secondary);
         }
 
         .form-control {
@@ -194,12 +187,6 @@
         .btn-primary:focus {
             box-shadow: 0 0 0 3px rgba(0, 153, 93, 0.3);
         }
-        
-        .form-actions {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-md);
-        }
 
         .footer-links {
             margin-top: var(--space-lg);
@@ -238,63 +225,38 @@
         <img src="./img/logo.png" alt="Logo da empresa" class="logo">
     </header>
 
-    <div class="register-container">
+    <div class="forgot-container">
         <!-- Imagem lateral (visível apenas em telas maiores) -->
-        <div class="register-image"></div>
+        <div class="forgot-image"></div>
 
-        <!-- Formulário de cadastro -->
-        <div class="register-form-container">
-            <div class="register-form">
-                <h1 class="register-form-title">Solicitar Cadastro</h1>
-                <p class="register-form-subtitle">Preencha o formulário abaixo para solicitar acesso ao sistema</p>
+        <!-- Formulário de recuperação de senha -->
+        <div class="forgot-form-container">
+            <div class="forgot-form">
+                <h1 class="forgot-form-title">Recuperação de Senha</h1>
+                <p class="forgot-form-subtitle">Informe seu email para receber instruções de recuperação de senha</p>
                 
-                <form action="{{ route('registerRequest') }}" method="post">
+                <form action="{{ route('/forgot-password') }}" method="post">
                     @csrf
                     <div class="form-group">
-                        <label for="name" class="form-label">Nome Completo</label>
-                        <input type="text" id="name" name="name" class="form-control" 
-                            placeholder="Digite seu nome completo" required />
-                        @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label for="username" class="form-label">Nome de Usuário</label>
-                        <input type="text" id="username" name="username" class="form-control" 
-                            placeholder="Digite um nome de usuário" required />
-                        @error('username')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="form-label">E-mail</label>
                         <input type="email" id="email" name="email" class="form-control" 
-                            placeholder="Digite seu e-mail" required />
-                        @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
+                            placeholder="Digite seu email cadastrado" required />
+                        <?php
+                        if (isset($message)) {
+                            echo '<script>alert("Enviado com sucesso!");</script>';
+                        }
+                        ?>
                     </div>
 
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-user-plus"></i> Solicitar Cadastro
-                        </button>
-                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Enviar Instruções
+                    </button>
                     
                     <div class="footer-links">
                         <a href="/login">
                             <i class="fas fa-sign-in-alt"></i> Acessar minha conta
                         </a>
-                        <a href="/forgot">
-                            <i class="fas fa-lock-open"></i> Esqueci minha senha
+                        <a href="/solicitarCadastro">
+                            <i class="fas fa-user-plus"></i> Solicitar cadastro
                         </a>
                     </div>
                 </form>
