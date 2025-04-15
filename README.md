@@ -29,7 +29,6 @@ A secure and robust web application that provides authenticated access to Power 
 
 The project follows a **Domain-Driven Design (DDD)** approach, separating concerns across different layers to improve code organization and scalability. Key directories include:
 
-- `Domains/` - Domain logic and aggregates
 - `App/Http/Controllers/` - Entry points for user interaction
 - `App/Providers/` - Service container bindings
 - `Resources/Views/` - Blade templates built and optimized via Vite
